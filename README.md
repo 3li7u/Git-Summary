@@ -69,4 +69,9 @@ this is just a local repo for testing GIT
         - create a new local branch
         $ git checkout -b [BRANCH-NAME]
         - and push that to GitHub
-        $ git push origin
+        $ git push origin [BRANCH-NAME]
+        - now you have a pull request on your GitHub repo you can confirm it and merge it to master branch as all other branches
+
+# GitHub Pages:
+    - in your GitHub repo navigate to settings then > pages then select branch to deploy your project on GitHub pages
+    - you will get the link to your project [USERNAME.github.io/YOUR-PROJECT/index.html]
