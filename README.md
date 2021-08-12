@@ -6,7 +6,7 @@ this is just a local repo for testing GIT
 
     You can download Git for free from the following website: [https://www.git-scm.com/]
 
-# Git Command:
+# Git Commands:
 
     $ git --version : for check if git installed or not
 
@@ -33,3 +33,24 @@ this is just a local repo for testing GIT
     $ git branch -d [BRANCH-NAME] : delete specified branch
 
     $ git merge [BRANCH-NAME] : Merge current branch with specified branch
+
+
+# GitHub Commands:
+    - Go to [https://github.com/] and sign up for an account, Remember to use the same e-mail address you used in the Git config.
+
+    - Create a repo on GitHub
+
+    - Push Local Repository to GitHub:
+    $ git remote add origin [REPO-URL]
+    $ git push origin master
+
+    - Note: Since this is the first time you are connecting to GitHub, you will get some kind of notification you to authenticate this connection.
+
+    - Fetch changes from GitHub:
+    $ git fetch origin : to see what has changed on GitHub in this repo
+
+    - Merge our current branch (master) with GitHub branch (origin/master)
+    $ git merge origin/master
+
+    - Fetch and Merge. It is used to Pull all changes from a remote repository into the branch you are working on.
+    $ git pull origin
