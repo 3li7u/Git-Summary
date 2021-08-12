@@ -1,6 +1,6 @@
 # Git Test
 
-this is just a local repo for testing GIT
+this is just a local repository for testing GIT & GitHub
 
 # Git Install:
 
@@ -8,31 +8,43 @@ this is just a local repo for testing GIT
 
 # Git Commands:
 
-    $ git --version : for check if git installed or not
+    - To check if Git is installed or not:
+    $ git --version
 
+    - To set the username and mail:
     $ git config --global user.name "[USERNAME]"
     $ git config --global user.email "[EMAIL]"
 
-    $ git init : Initialized empty Git repository
+    - To Initialize an empty Git repository:
+    $ git init
 
-    $ git status : for check the statuse of all file in repo [Untracked, Added or Staged, Changed, Commited]
+    - To check the status of all files in repo [Untracked, Added/Staged, Changed, Committed]:
+    $ git status
 
-    $ git add [file.name] : to add [stage] an Untracked file or changed file to be a Staged file
-        - Create new file in repo is [Untracked file] U
-        - Modifies a file in repo is [Changed file] M
-        - to save tow type above we use $ git add to be a [Added or Staged files] A
+    - To add/stage an Untracked file or changed file to be a Staged file:
+    $ git add [file.name]
+        - New file in repo is [Untracked file] U
+        - Modified file in repo is [Changed file] M
+        - To save the two types of files above [U & M] we use $ git add to be a [Added or Staged files] A
 
-    $ git commit -m "[MESSAGE]" : to Commit a Stage file
-        - Commited files are a save point you can go back to if you find a bug
+    - To Commit a staged files:
+    $ git commit -m "[MESSAGE]"
+        - Committed files are a save point you can go back to if you find a bug
 
-    $ git log : To view the history of commits for a repo
+    - To list all commits for a repository:
+    $ git log 
 
-    $ git branch [BRANCH-NAME] : Create new branch
-    $ git branch : view list of branches
-    $ git checkout [ANY-BRANCH] : Moving us from the current branch, to specified one
-    $ git branch -d [BRANCH-NAME] : delete specified branch
+    - To create new branch:
+    $ git branch [BRANCH-NAME]
+    - To list all branches
+    $ git branch
+    - To moving us from the current branch, to specific one:
+    $ git checkout [BRANCH-NAME]
+    - To delete a specific branch:
+    $ git branch -d [BRANCH-NAME]
 
-    $ git merge [BRANCH-NAME] : Merge current branch with specified branch
+    - To merge current branch with specific branch
+    $ git merge [BRANCH-NAME]
 
 # GitHub Commands:
 
@@ -40,38 +52,43 @@ this is just a local repo for testing GIT
 
     - Create a repo on GitHub
 
-    - Push Local Repository to GitHub:
+    - To push a local repository to GitHub:
     $ git remote add origin [REPO-URL]
     $ git push --set-upstream origin master
 
     - Note: Since this is the first time you are connecting to GitHub, you will get some kind of notification you to authenticate this connection.
 
-    - Fetch changes from GitHub:
-    $ git fetch origin : to see what has changed on GitHub in this repo
+    - To fetch changes from GitHub: To see what has changed on GitHub in this repo:
+    $ git fetch origin
 
-    - Merge our current branch (master) with GitHub branch (origin/master)
-    $ git merge origin/master
+    - To merge our current branch with remote GitHub branch:
+    $ git merge origin/[BRANCH-NAME]
 
-    - Fetch and Merge. It is used to Pull all changes from a remote repository into the branch you are working on.
+    - To Pull [fetch and merge] all changes from a remote repository into the local branch you are working on:
     $ git pull origin
 
-    - Push Changes to GitHub
+    - To push your changes from local repo to GitHub:
     $ git push origin
 
     - Branches on GitHub:
-    $ git branch -r : list of remote branches
 
-    - Pull Branches:
-        - you can create new branch on GitHub and use
-        $ git pull origin : to get it in local repo as remote branch
-        - then you can switch to local new branch by $ git checkout [NEW-BRANCH] and work on it
-    - Push a Branch to GitHub
-        - create a new local branch
+    - To list remote branches:
+    $ git branch -r
+
+    - To pull Branches:
+        - You can create new branch on GitHub and use:
+        $ git pull origin : To get it local as remote branch.
+        - Then you can switch to local new branch by:
+        $ git checkout [NEW-GITHUB-BRANCH] : And work on it locally.
+
+    - To push a local new Branch to GitHub:
+        - create a new local branch by:
         $ git checkout -b [BRANCH-NAME]
         - and push that to GitHub
         $ git push origin [BRANCH-NAME]
-        - now you have a pull request on your GitHub repo you can confirm it and merge it to master branch as all other branches
+        - Now you have a pull request on your GitHub repo you can confirm it and merge it with master branch
 
 # GitHub Pages:
-    - in your GitHub repo navigate to settings then > pages then select branch to deploy your project on GitHub pages
-    - you will get the link to your project [USERNAME.github.io/YOUR-PROJECT/index.html]
+
+    - In your GitHub repo navigate to: [settings] > [pages] then select branch to deploy your project on GitHub pages
+    - you will get the link to your as [USERNAME.github.io/YOUR-PROJECT/index.html]
