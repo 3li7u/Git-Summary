@@ -34,15 +34,15 @@ this is just a local repo for testing GIT
 
     $ git merge [BRANCH-NAME] : Merge current branch with specified branch
 
-
 # GitHub Commands:
+
     - Go to [https://github.com/] and sign up for an account, Remember to use the same e-mail address you used in the Git config.
 
     - Create a repo on GitHub
 
     - Push Local Repository to GitHub:
     $ git remote add origin [REPO-URL]
-    $ git push origin master
+    $ git push --set-upstream origin master
 
     - Note: Since this is the first time you are connecting to GitHub, you will get some kind of notification you to authenticate this connection.
 
@@ -54,3 +54,19 @@ this is just a local repo for testing GIT
 
     - Fetch and Merge. It is used to Pull all changes from a remote repository into the branch you are working on.
     $ git pull origin
+
+    - Push Changes to GitHub
+    $ git push origin
+
+    - Branches on GitHub:
+    $ git branch -r : list of remote branches
+
+    - Pull Branches:
+        - you can create new branch on GitHub and use
+        $ git pull origin : to get it in local repo as remote branch
+        - then you can switch to local new branch by $ git checkout [NEW-BRANCH] and work on it
+    - Push a Branch to GitHub
+        - create a new local branch
+        $ git checkout -b [BRANCH-NAME]
+        - and push that to GitHub
+        $ git push origin
