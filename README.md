@@ -1,94 +1,168 @@
-# Git Test
-
-this is just a local repository for testing GIT & GitHub
+# Useful Git Commands for Git & Github
 
 # Git Install:
-
-    You can download Git for free from the following website: [git-scm.com](https://www.git-scm.com/)
+You can download Git for free from the official Git website: [git-scm.com](https://www.git-scm.com/)
 
 # Git Commands:
 
-    - To check if Git is installed or not:
-    $ git --version
+After intallation, Check if Git is installed or not:
+     
+     $ git --version
 
-    - To set the username and mail:
+&nbsp;
+
+Set the username and mail:
+
     $ git config --global user.name "[USERNAME]"
     $ git config --global user.email "[EMAIL]"
 
-    - To Initialize an empty Git repository:
+&nbsp;
+
+Initialize an empty Git repository:
+
     $ git init
 
-    - To check the status of all files in repo [Untracked, Added/Staged, Changed, Committed]:
+&nbsp;
+
+Start a demo project and check the status of all project files in your repo
+1. Untracked [U] refers to new files [created after repo initialization] in the repo
+2. Changed [M] refers to modified files in the repo
+3. Added/Staged [A] refers to saved [Untracked & Changed files after add them with *git add* command] files in the repo.
+</a>
+
     $ git status
 
-    - To add/stage an Untracked file or changed file to be a Staged file:
+&nbsp;
+
+Add/Stage Untracked or Changed files to be a Staged files, `add .` to add all files in one time.
+
     $ git add [file.name]
-        - New file in repo is [Untracked file] U
-        - Modified file in repo is [Changed file] M
-        - To save the two types of files above [U & M] we use $ git add to be a [Added or Staged files] A
+    $ git add . 
 
-    - To Commit a staged files:
+&nbsp;
+
+Commit a staged files: Committed files are a save point you can go back to if you find a bug
+
     $ git commit -m "[MESSAGE]"
-        - Committed files are a save point you can go back to if you find a bug
 
-    - To list all commits for a repository:
+&nbsp;
+
+List all commits for a repository:
+
     $ git log 
 
-    - To create new branch:
+&nbsp;
+
+Create new branch:
+
     $ git branch [BRANCH-NAME]
-    - To list all branches
-    $ git branch
-    - To moving us from the current branch, to specific one:
+
+&nbsp;
+
+List all branches
+
+    $ git branch   
+
+&nbsp;
+
+Moving from the current branch, to specific one:
+
     $ git checkout [BRANCH-NAME]
-    - To delete a specific branch:
+
+&nbsp;
+
+Delete a specific branch:
+
     $ git branch -d [BRANCH-NAME]
 
-    - To merge current branch with specific branch
+&nbsp;
+
+Merge current branch with specific branch
+    
     $ git merge [BRANCH-NAME]
 
-# Git Commands for GitHub:
 
-    - Go to [GitHub](https://github.com/) and sign up for an account, Remember to use the same e-mail address you used in the Git config.
+# Git Commands for remote GitHub repo:
 
-    - Create a new repo on GitHub
+ Go to [GitHub](https://github.com) and sign up for an account\
+ Remember to use the same e-mail address you used in the Git config.
 
-    - To push a local repository to GitHub:
-    $ git remote add origin [REPO-URL]
-    $ git push --set-upstream origin master
+Create a new repo on GitHub\
+Push your local repository to GitHub:
 
-    - Note: Since this is the first time you are connecting to GitHub, you will get some kind of notification you to authenticate this connection.
+    $ git remote add origin [GITHUB_REPO_URL]
+    $ git push -u origin master
 
-    - To fetch changes from GitHub: To see what has changed on GitHub in this repo:
+Note: Since this is the first time you are connecting to GitHub, you will get some kind of notification to authenticate this connection.
+
+&nbsp;
+
+Fetch changes from GitHub repo: To see what has changed on GitHub in this repo:
+
     $ git fetch origin
 
-    - To merge our current branch with remote GitHub branch:
+&nbsp;
+
+Merge current branch with remote GitHub branch:
+
     $ git merge origin/[BRANCH-NAME]
 
-    - To Pull [fetch and merge] all changes from a remote repository into the local branch you are working on:
+&nbsp;
+
+Pull [fetch and merge] all changes from a remote repository into the local branch you are working on:
+
     $ git pull origin
 
-    - To push your changes from local repo to GitHub:
+&nbsp;
+
+Push your changes from local repo to GitHub:
+
     $ git push origin
 
-    - Branches on GitHub:
+&nbsp;
 
-    - To list remote branches:
+Branches on GitHub:\
+List remote branches:
+
     $ git branch -r
 
-    - To pull Branches:
-        - You can create new branch on GitHub and use:
-        $ git pull origin : To get it local as remote branch.
-        - Then you can switch to local new branch by:
-        $ git checkout [NEW-GITHUB-BRANCH] : And work on it locally.
+&nbsp;
 
-    - To push a local new Branch to GitHub:
-        - create a new local branch by:
-        $ git checkout -b [BRANCH-NAME]
-        - and push that to GitHub
-        $ git push origin [BRANCH-NAME]
-        - Now you have a pull request on your GitHub repo you can confirm it and merge it with master branch
+Pull Branches:\
+Create new branch on GitHub and get it local as remote branch:
+
+    $ git pull origin
+
+&nbsp;
+
+Switching to the local new branch and work on it locally:
+
+    $ git checkout [NEW_GITHUB_BRANCH_NAME]
+
+&nbsp;
+
+Push a local new Branch to GitHub:\
+Create a new local branch and push it to GitHub:
+
+    $ git checkout -b [BRANCH-NAME]
+    $ git push origin [BRANCH-NAME]
+
+&nbsp;
+
+Now you have a pull request on your GitHub repo you can confirm it and merge it with master branch.
 
 # GitHub Pages:
 
-    - In your GitHub repo navigate to: [settings] > [pages] then select branch to deploy your project on GitHub pages
-    - you will get the link to your as [USERNAME.github.io/YOUR-PROJECT/index.html]
+Deploy your website to Github pages:
+1. Create new github repo
+2. Push your local repo to the remote one that you just created.
+3. In your GitHub repo navigate to: [settings] then: [pages]
+4. If your repo has more than one branch, Select the one that contains your website to deploy it on GitHub pages.
+</a>
+you will get the link to your website as [USERNAME.github.io/YOUR_REPO_NAME]
+
+&nbsp;
+
+To deploy on the root [USERNAME.github.io]\
+Create a new repo with specific name [USERNAME.github.io]\
+then repeat the steps from 2 to 4
