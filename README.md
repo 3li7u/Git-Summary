@@ -4,7 +4,7 @@ this is just a local repository for testing GIT & GitHub
 
 # Git Install:
 
-    You can download Git for free from the following website: [https://www.git-scm.com/]
+    You can download Git for free from the following website: [git-scm.com](https://www.git-scm.com/)
 
 # Git Commands:
 
@@ -46,11 +46,11 @@ this is just a local repository for testing GIT & GitHub
     - To merge current branch with specific branch
     $ git merge [BRANCH-NAME]
 
-# GitHub Commands:
+# Git Commands for GitHub:
 
-    - Go to [https://github.com/] and sign up for an account, Remember to use the same e-mail address you used in the Git config.
+    - Go to [GitHub](https://github.com/) and sign up for an account, Remember to use the same e-mail address you used in the Git config.
 
-    - Create a repo on GitHub
+    - Create a new repo on GitHub
 
     - To push a local repository to GitHub:
     $ git remote add origin [REPO-URL]
